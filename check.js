@@ -5,6 +5,7 @@ function setSenButton() {
     if (onlyRole) {
     	if (selectVal == '') {
      		$('#issue-comment-add-submit').hide();
+     		$('#pleaseSelect').show();
      	} else {
         	$('#issue-comment-add-submit').show();
         	$('#pleaseSelect').hide();
@@ -26,7 +27,7 @@ function restore_options() {
 
 $(function() {
 	if(window.location.href.indexOf("atlassian.net") > -1) {
-		$('#commentLevel').after('<span id="pleaseSelect" style="color:red;"><b>&lt;-- Please select!</b></span>');
+		$('#commentLevel').after('<span id="pleaseSelect" style="color:red;"><b>&lt;-- Select please</b></span>');
 		restore_options();
 		$('#issue-comment-add-submit').hide();
 		$("body").on("click", ".aui-list-item-link", function(){
